@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" >
+<LinearLayout  
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="horizontal" android:layout_weight="10">
+ <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        
+       />
+ 
+     <ZoomControls
+        android:id="@+id/zoomControls1"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"  
+        android:layout_weight="1"
+        />
+      
+  </LinearLayout>
+<com.esri.android.map.MapView 
+     xmlns:android="http://schemas.android.com/apk/res/android" 
+     android:id="@+id/map" 
+     android:layout_width="fill_parent" 
+     android:layout_height="fill_parent"
+     android:layout_weight="1"
+     initExtent="13275985 3002153 13289993 3016650">     
+  <com.esri.android.map.ags.ArcGISTiledMapServiceLayer 
+     url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"/>   
+</com.esri.android.map.MapView>
+
+</LinearLayout>
